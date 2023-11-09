@@ -9,7 +9,7 @@
 shopt -s histappend
 shopt -s histverify
 export HISTCONTROL=ignoreboth
-
+termux-x11 :1 -xstartup "dbus-launch --exit-with-session xfce4-session" > /dev/null 2>&1 &
 # Default command line prompt.
 PROMPT_DIRTRIM=2
 #PS1='\[\e[0;32m\]\w\[\e[0m\] \[\e[0;97m\]\$\[\e[0m\] '
