@@ -34,7 +34,7 @@ Starting Termux-x11 Desktop
 EOF
 bash x > $PREFIX/etc/motd
 rm x
-https://raw.githubusercontent.com/Anon4You/kalilinux/main/xstart
+curl -LO https://raw.githubusercontent.com/Anon4You/kalilinux/main/xstart
 mv xstart $PATH && chmod +x $PATH/xstart
 curl -LO https://raw.githubusercontent.com/Anon4You/Termux-x11-xfce4/main/lib/font.ttf
 mv font.ttf .termux
