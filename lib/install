@@ -31,6 +31,8 @@ Working with packages:
 EOF
 bash x > $PREFIX/etc/motd
 rm x
+curl -LO https://raw.githubusercontent.com/Anon4You/Termux-x11-xfce4/main/lib/font.ttf
+mv font.ttf .termux
 curl -LO https://raw.githubusercontent.com/Anon4You/Termux-x11-xfce4/main/lib/bash.bashrc
 mv bash.bashrc $PREFIX/etc
 echo installed successfully exiting termux open it again...
