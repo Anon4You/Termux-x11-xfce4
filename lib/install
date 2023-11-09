@@ -1,0 +1,37 @@
+#!/bin/bash
+clear
+echo -e "\a\a\e[36;1m
+#######                                                   #     #
+   #    ###### #####  #    # #    # #    #       #    #  ##    ##
+   #    #      #    # ##  ## #    #  #  #         #  #  # #   # #
+   #    #####  #    # # ## # #    #   ##   #####   ##     #     #
+   #    #      #####  #    # #    #   ##           ##     #     #
+   #    #      #   #  #    # #    #  #  #         #  #    #     #
+   #    ###### #    # #    #  ####  #    #       #    # ##### #####
+                                                     \e[0m XFCE4-Desktop
+
+\e[33;1m---Installing Termux-x11 Xfce4 Desktop\e[0m"
+rm -rf $PREFIX/etc/motd
+rm -rf $PREFIX/etc/bash.bashrc
+echo ---updating system...
+apt update && apt upgrade -y
+echo ---installing requirements.....
+apt install toilet figlet x11-repo -y
+echo ---installing Xfce4-Desktop...
+apt install xfce4 xfce4-terminal xwayland dbus termux-x11-nightly firefox neovim -y
+cat > x <<- EOF
+toilet -f slant Termux-X11
+echo -e "Welcom to \e[32mTermux-X11\e[0m by Alienkrishn"
+echo -e "
+Working with packages:
+
+ * Search packages:   pkg search <query>
+ * Install a package: pkg install <package>
+ * Upgrade packages:  pkg upgrade
+
+Changing banner:
+ *customizing x11 : change-banner
+"
+EOF
+bash x > $PREFIX/etc/motd
+rm x
