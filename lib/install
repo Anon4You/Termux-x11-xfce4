@@ -27,9 +27,6 @@ Working with packages:
  * Search packages:   pkg search <query>
  * Install a package: pkg install <package>
  * Upgrade packages:  pkg upgrade
-
-Adding your name on banner:
- *customizing x11 : change-banner
 "
 EOF
 bash x > $PREFIX/etc/motd
