@@ -33,10 +33,6 @@ bash x > $PREFIX/etc/motd
 rm x
 curl -LO https://raw.githubusercontent.com/Anon4You/Termux-x11-xfce4/main/lib/bash.bashrc
 mv bash.bashrc $PREFIX/etc
-echo "alienx" > $PATH/change-banner
-chmod +x $PATH/change-banner
-curl -LO https://raw.githubusercontent.com/Anon4You/Termux-x11-xfce4/main/lib/alienx
-mv alienx $PATH && chmod +x $PATH/alienx
 echo installed successfully exiting termux open it again...
 sleep 3
 kill -9 $PPID
