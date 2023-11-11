@@ -16,7 +16,7 @@ apt update && apt upgrade -y
 echo ---installing requirements.....
 apt install toilet figlet x11-repo -y
 echo ---installing Xfce4-Desktop...
-apt install xfce4 xfce4-terminal xwayland dbus termux-x11-nightly firefox neovim -y
+apt install xfce4 xfce4-terminal xwayland dbus termux-x11-nightly xfce4-goodies firefox neovim -y
 rm -rf $PREFIX/etc/motd
 cat > x <<- EOF
 toilet -f slant Termux-X11
